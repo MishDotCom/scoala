@@ -75,3 +75,20 @@ while (n != 0){
     cout << c << " ";
 }
 ```
+### → Eliminarea Unei Cifre
+```cpp
+int n,m,p;
+cin>>n;
+//p se initializeaza cu elementul neutru al inmultirii
+p=1;
+//construim numarul m cu cifrele impare ale lui n, astfel m o sa reprezinte numarul format prin eliminarea cifrelor pare
+while(n>0)
+{
+    if(n%2==1)//se verifica daca cifra este impara
+    {
+         m=(n%10)*p+m;// se adauga cifra pe pozitia corespunzatoare in numarul nou format(unitati, zeci, sute etc.)
+         p=p*10;//se mareste puterea lui 10, pentru ca urmatoarea cifra impara sa fie adaugata din nou pe pozitia corespunzatoare(zeci, sute, mii etc.)
+    }
+    n=n/10;
+{
+```
